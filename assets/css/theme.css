@@ -54,9 +54,20 @@
   }
 }
 
+
+main {
+  position: absolute;
+
+
+  background: linear-gradient(to right, #aa5de8, #615de8, #a5b1ea, #ea4ee9);
+  
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
+}
+
 body::before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -75,12 +86,6 @@ body {
   line-height: 1.5;
   /*color: #4d5769;
   background-color: #ebe0c7;*/
-
-
-  background: linear-gradient(to right, #aa5de8, #615de8, #a5b1ea, #ea4ee9);
-  
-  background-size: 400% 400%;
-  animation: gradient 13s ease infinite;
 
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -672,35 +677,6 @@ progress {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
-  .container, .container-sm, .transparent-block, .main-container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container, .container-sm, .container-md, .transparent-block, .main-container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container, .container-sm, .container-md, .container-lg, .transparent-block, .main-container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .transparent-block, .main-container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1540px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .transparent-block, .main-container {
-    max-width: 1480px;
-  }
-}
 
 .row {
   --bs-gutter-x: 2rem;
@@ -1043,7 +1019,7 @@ progress {
   width: 90%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.7); 
-  z-index: -1; 
+  z-index: 1; 
 }
 @media (min-width: 576px) {
   .col-sm {
@@ -17449,6 +17425,7 @@ section {
   position: relative;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  z-index: 2;
 }
 
 @media (min-width: 992px) {
@@ -18202,7 +18179,7 @@ label {
 */
 
 .main-container {
-  width: 100%;
+  width: 90%;
   padding-right: var(--bs-gutter-x, 1rem);
   padding-left: var(--bs-gutter-x, 1rem);
   margin-right: auto;
